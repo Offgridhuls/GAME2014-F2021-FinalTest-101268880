@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1014149006762962782}
   - component: {fileID: 1014149006762962771}
   - component: {fileID: 1014149006762962770}
-  - component: {fileID: 8847508950586742855}
-  - component: {fileID: -6946393797022283114}
+  - component: {fileID: 5809199376761973884}
+  - component: {fileID: 1413806751875277334}
   m_Layer: 8
   m_Name: ShrinkingPlatform
   m_TagString: Untagged
@@ -102,6 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a9b736b3b608143bb7a3c5e09e1c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shrinking: {fileID: 1413806751875277334}
+  growing: {fileID: 5809199376761973884}
 --- !u!61 &1014149006762962771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,7 +145,7 @@ MonoBehaviour:
   target1: {fileID: 1014149007390327549}
   target2: {fileID: 1014149007842500782}
   speed: 0.5
---- !u!82 &8847508950586742855
+--- !u!82 &5809199376761973884
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,7 +156,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 899a7a0c40388234fa848ef9fcce28cb, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -239,7 +241,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &-6946393797022283114
+--- !u!82 &1413806751875277334
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,7 +252,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 970b6cf146198414e838a6753cfcbf53, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
