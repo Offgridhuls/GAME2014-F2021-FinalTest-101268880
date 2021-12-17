@@ -19,8 +19,8 @@ public class ShrinkingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        minSize = new Vector3(0.1f, 0.1f, 0.1f);
-        maxSize = transform.localScale;
+        minSize = new Vector3(0.1f, 0.1f, 0.1f); // setting minimum size of platform
+        maxSize = transform.localScale; // setting maximum size of platform
         collider = this.GetComponent<BoxCollider2D>();
     }
 
@@ -32,7 +32,7 @@ public class ShrinkingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player") //when the player touches the collider box of the shrinking platform, set is shrinking to true
         {
             isShrinking = true;
         }
@@ -40,7 +40,7 @@ public class ShrinkingPlatform : MonoBehaviour
     
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player") //when the player exits the collider box of the shrinking platform, set shrinking to false
         {
             isShrinking = false;
         }
@@ -48,9 +48,9 @@ public class ShrinkingPlatform : MonoBehaviour
 
     void LerpSize()
     {
-        if (!isShrinking)
-            transform.localScale = Vector3.Lerp(transform.localScale, maxSize, 2.0f * Time.deltaTime);
+        if (!isShrinking) // if the bool is false
+            transform.localScale = Vector3.Lerp(transform.localScale, maxSize, 2.0f * Time.deltaTime); //lerp to the max size, set at start of script
         else
-            transform.localScale = Vector3.Lerp(transform.localScale, minSize, 2.0f * Time.deltaTime);
+            transform.localScale = Vector3.Lerp(transform.localScale, minSize, 2.0f * Time.deltaTime); //else if true, lerp to minimum size, set at start of script
     }
 }
