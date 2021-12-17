@@ -9,12 +9,13 @@ using UnityEngine;
 public class ShrinkingPlatform : MonoBehaviour
 {
     [Header("ShrinkingBool")]
-    bool isShrinking = false;
+    private bool isShrinking = false;
 
     [Header("Minimum and Maximum, platform sizes")]
     private Vector3 maxSize;
     private Vector3 minSize;
 
+    public AudioSource shrinking, growing;
     private BoxCollider2D collider;
     // Start is called before the first frame update
     void Start()
@@ -49,8 +50,14 @@ public class ShrinkingPlatform : MonoBehaviour
     void LerpSize()
     {
         if (!isShrinking) // if the bool is false
+        {
             transform.localScale = Vector3.Lerp(transform.localScale, maxSize, 2.0f * Time.deltaTime); //lerp to the max size, set at start of script
+            shrinking.Play();
+        }
         else
+        {
             transform.localScale = Vector3.Lerp(transform.localScale, minSize, 2.0f * Time.deltaTime); //else if true, lerp to minimum size, set at start of script
+            growing.Play();
+        }
     }
 }
