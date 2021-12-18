@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a9b736b3b608143bb7a3c5e09e1c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrinking: {fileID: 1413806751875277334}
-  growing: {fileID: 5809199376761973884}
+  shrinkingSound: {fileID: 1413806751875277334}
+  growingSound: {fileID: 5809199376761973884}
 --- !u!61 &1014149006762962771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 970b6cf146198414e838a6753cfcbf53, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

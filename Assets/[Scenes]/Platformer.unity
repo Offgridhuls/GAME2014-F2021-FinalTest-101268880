@@ -21880,6 +21880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShrinkingPlatform2
       objectReference: {fileID: 0}
+    - target: {fileID: 1413806751875277334, guid: a7a3e20a3db96244a84162286e55f740, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a3e20a3db96244a84162286e55f740, type: 3}
 --- !u!1 &1416282131

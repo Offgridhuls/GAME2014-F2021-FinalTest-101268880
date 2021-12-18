@@ -15,7 +15,7 @@ public class ShrinkingPlatform : MonoBehaviour
     private Vector3 maxSize;
     private Vector3 minSize;
 
-    public AudioSource shrinking, growing;
+    public AudioSource shrinkingSound, growingSound;
 
     private BoxCollider2D collider;
     // Start is called before the first frame update
@@ -37,7 +37,7 @@ public class ShrinkingPlatform : MonoBehaviour
         if(collision.gameObject.tag == "Player") //when the player touches the collider box of the shrinking platform, set is shrinking to true
         {
             isShrinking = true;
-            shrinking.Play();
+            shrinkingSound.Play();
         }
     }
     
@@ -46,7 +46,7 @@ public class ShrinkingPlatform : MonoBehaviour
         if (collision.gameObject.tag == "Player") //when the player exits the collider box of the shrinking platform, set shrinking to false
         {
             isShrinking = false;
-            growing.Play();
+            growingSound.Play();
         }
     }
 

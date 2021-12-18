@@ -23,7 +23,7 @@ public class MovingPlatform : MonoBehaviour
 
     void Start()
     {
-        targetPosition1 = target1.position;
+        targetPosition1 = target1.position; // setting private variables
         targetPosition2 = target2.position;
         targetPosition = targetPosition1;
     }
